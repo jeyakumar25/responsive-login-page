@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f8fafb;
+}
+
+/* mobile-potrait view */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .mainContainer {
+        padding: 40px 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .leftContainer {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .rightContainer {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+    }
+
+    .rightContainer > div {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* mobile-landscape view */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .mainContainer {
+        padding: 90px 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        padding: 0;
+        width: 98%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .leftContainer {
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .rightContainer {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 5px;
+    }
+
+    .rightContainer > div {
+        width: 69%;
+        margin: 0 auto;
+    }
+}
+
+/* tablet view */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .mainContainer {
+        padding: 90px 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        padding: 0 2rem;
+        width: 92%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .leftContainer {
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .rightContainer {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 35px;
+    }
+
+    .rightContainer > div {
+        width: 69%;
+        margin: 0 auto;
+    }
+}
+
+/* desktop view */
+@media only screen and (min-width: 1024px) {
+    .mainContainer {
+        padding: 90px 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        padding: 0 2rem;
+        width: 75%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .leftContainer {
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .rightContainer {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 35px;
+    }
+
+    .rightContainer > div {
+        width: 69%;
+        margin: 0 auto;
+    }
+}
+
+.image img {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.image {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.rightContainer div form h2 {
+    margin: 0 0 13px 0;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.para1 {
+    margin: 0;
+    color: #b3b3b3;
+    margin: 0 0 25px 0;
+}
+
+input[type=text], input[type=password] {
+    display: block;
+    background-color: #edf2f5;
+    padding: 25px 10px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border: 0;
+    outline: none;
+}
+
+input[type=text] {
+    border-radius: 5px 5px 0 0;
+}
+
+input[type=password] {
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 26px 0;
+}
+
+input[type=checkbox] {
+    background-color: #edf2f5;
+    border: 0;
+}
+
+/* Customize the label (the container) */
+.checkboxContainer {
+    position: relative;
+    padding: 3px 0 0 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #888888;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background-color: #eeeeee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxContainer:hover input ~ .checkmark {
+    background-color: #cccccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxContainer input:checked ~ .checkmark {
+    background-color: #847dff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxContainer .checkmark:after {
+    left: 7px;
+    top: 4px;
+    width: 3px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.belowInput {
+    display: flex;
+    margin-bottom: 34px;
+}
+
+.belowInput a {
+    margin-left: auto;
+    padding-top: 3px;
+    color: #888888;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.belowInput a:hover {
+    text-decoration: underline;
+}
+
+.rightContainer div form button {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 17px;
+    border: 0;
+    background-color: #6c63ff;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 26px;
+}
+
+.rightContainer div form button:hover {
+    background-color: #483dff;
+}
+
+.para2 {
+    margin: 0 0 26px 0;
+    color: #6c757d;
+    font-size: 17px;
+}
+
+.logos {
+    display: flex;
+}
+
+.logos a {
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.facebookIcon {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 16px 18px;
+    background-color: #3b5998;
+}
+
+.facebookIcon:hover {
+    background-color: #344e86;
+}
+
+.twitterIcon {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 17px 16px;
+    background-color: #1da1f2;
+}
+
+.twitterIcon:hover {
+    background-color: #0d95e8;
+}
+
+.googleIcon {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 16px 16px;
+    background-color: #ea4335;
+}
+
+.googleIcon:hover {
+    background-color: #e82e1e;
+}
